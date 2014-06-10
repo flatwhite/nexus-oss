@@ -25,7 +25,7 @@
 
   <artifactId>nexus-blobstore-plugin</artifactId>
   <name>${project.groupId}:${project.artifactId}</name>
-  <packaging>nexus-plugin</packaging>
+  <packaging>bundle</packaging>
 
   <properties>
     <pluginName>Nexus Blobstore Plugin</pluginName>
