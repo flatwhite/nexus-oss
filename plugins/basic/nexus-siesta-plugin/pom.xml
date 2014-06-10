@@ -68,10 +68,12 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <configuration>
           <instructions>
-            <Require-Bundle>
-              org.sonatype.nexus.plugin-api,
-              org.sonatype.nexus.plugins.nexus-ui-extjs3-plugin
-            </Require-Bundle>
+            <_exportcontents>
+              !javax.activation|javax.annotation|javax.xml.namespace|*-*,*
+            </_exportcontents>
+            <Import-Package>
+              javax.activation,javax.annotation,javax.xml.namespace,*;resolution:=optional
+            </Import-Package>
           </instructions>
         </configuration>
       </plugin>

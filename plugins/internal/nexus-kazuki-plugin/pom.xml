@@ -109,11 +109,9 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <configuration>
           <instructions>
-            <Require-Bundle>
-              org.sonatype.nexus.plugin-api,
-              org.sonatype.nexus.plugins.nexus-crypto-plugin,
-              org.sonatype.nexus.plugins.nexus-h2-plugin
-            </Require-Bundle>
+            <Import-Package>
+              org.h2,*;resolution:=optional
+            </Import-Package>
           </instructions>
         </configuration>
       </plugin>

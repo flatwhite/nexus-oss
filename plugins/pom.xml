@@ -476,12 +476,11 @@
           <configuration>
             <instructions>
               <!--
-              Nexus plugin default instructions (based on Require-Bundle model)
+              Nexus plugin default instructions
               -->
               <Bundle-Name>${pluginName}</Bundle-Name>
               <Bundle-Description>${pluginDescription}</Bundle-Description>
               <Bundle-DocURL>http://links.sonatype.com/products/nexus/oss/home</Bundle-DocURL>
-              <Require-Bundle>org.sonatype.nexus.plugin-api</Require-Bundle>
               <!--
               Global ban on embedded dependencies already in core
               -->
@@ -565,7 +564,7 @@
               <Embed-Transitive>true</Embed-Transitive>
               <Private-Package>!*;-split-package:=first</Private-Package>
               <_exportcontents>
-                ![A-Z]*|lib*|static*|docs*|*-*|.*,*;-noimport:=true
+                ![A-Z]*|lib*|static*|docs*|*-*|.*,*
               </_exportcontents>
             </instructions>
           </configuration>

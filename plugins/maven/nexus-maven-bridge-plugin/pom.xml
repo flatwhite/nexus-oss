@@ -77,6 +77,21 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <_exportcontents>
+              !org.apache.maven.model,*
+            </_exportcontents>
+            <Import-Package>
+              org.apache.maven.model,*;resolution:=optional
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+
+      <plugin>
         <groupId>org.apache.karaf.tooling</groupId>
         <artifactId>karaf-maven-plugin</artifactId>
       </plugin>
